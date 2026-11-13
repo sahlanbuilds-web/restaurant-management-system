@@ -1,0 +1,34 @@
+.kitchen-tickets { color: #20282f; }
+.kitchen-tickets-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+.kitchen-tickets-heading h1 { margin: 0; }
+.kitchen-tickets-heading p, .kitchen-ticket-meta { margin: 5px 0 0; color: #748089; }
+.kitchen-tickets button { border: 1px solid #e0e3e5; border-radius: 8px; padding: 9px 12px; background: #fff; color: #53616a; cursor: pointer; }
+.kitchen-tickets button:disabled { opacity: .55; cursor: not-allowed; }
+.kitchen-ticket-filters { display: flex; gap: 7px; overflow-x: auto; margin-bottom: 15px; }
+.kitchen-ticket-filters button { flex: 0 0 auto; padding: 7px 12px; }
+.kitchen-ticket-filters button.active { border-color: #b96b2d; background: #fff6ed; color: #9c531c; font-weight: 700; }
+.kitchen-ticket-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+.kitchen-ticket { border: 1px solid #e5e8e9; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 4px 16px #15252b0a; }
+.kitchen-ticket.status-delayed { border-color: #da8c7f; background: #fffaf9; }
+.kitchen-ticket.status-ready { border-color: #8ac49a; }
+.kitchen-ticket-header { display: flex; justify-content: space-between; gap: 10px; }
+.kitchen-ticket-header h2 { margin: 0 0 5px; font-size: 19px; }
+.kitchen-ticket-header > span { height: fit-content; border-radius: 20px; padding: 5px 9px; background: #fff2dd; color: #87551d; font-weight: 700; font-size: 12px; }
+.kitchen-ticket.status-ready .kitchen-ticket-header > span, .kitchen-ticket.status-served .kitchen-ticket-header > span { background: #e8f5eb; color: #286741; }
+.kitchen-ticket-meta { font-size: 12px; }
+.kitchen-ticket ul { padding: 0; list-style: none; }
+.kitchen-ticket li { display: grid; gap: 5px; padding: 10px 0; border-bottom: 1px solid #eff0f1; }
+.kitchen-instruction { display: block; margin: 7px 0; color: #684416; border-radius: 6px; padding: 8px; background: #fff5dd; overflow-wrap: anywhere; }
+.kitchen-delay { margin: 8px 0; border-radius: 6px; padding: 9px; background: #ffebe7; color: #963a2c; }
+.kitchen-ticket-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+.kitchen-ticket-actions button.primary { border-color: #36794b; background: #36794b; color: #fff; font-weight: 700; }
+.kitchen-delay-form { display: grid; grid-template-columns: 1fr auto auto; align-items: end; gap: 7px; margin-top: 10px; }
+.kitchen-delay-form label { display: grid; gap: 5px; color: #684416; font-size: 12px; font-weight: 700; }
+.kitchen-delay-form input { width: 100%; min-width: 0; border: 1px solid #e0d1bb; border-radius: 7px; padding: 9px; font: inherit; }
+.kitchen-alert { margin-bottom: 12px; border-radius: 7px; padding: 9px 11px; }
+.kitchen-alert.error { background: #fff0ed; color: #9a3025; }
+.kitchen-alert.success { background: #edf8f0; color: #24633d; }
+.kitchen-empty { padding: 30px; color: #778087; text-align: center; }
+@media (max-width: 560px) { .kitchen-tickets-heading { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 450px) { .kitchen-delay-form { grid-template-columns: 1fr 1fr; } .kitchen-delay-form label { grid-column: 1 / -1; } }
+@media print { body * { visibility: hidden; } .kitchen-ticket.printing, .kitchen-ticket.printing * { visibility: visible; } .kitchen-ticket.printing { position: absolute; inset: 0 auto auto 0; width: 100%; border: 0; box-shadow: none; } .kitchen-ticket.printing .kitchen-ticket-actions { display: none; } }

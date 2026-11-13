@@ -1,0 +1,139 @@
+.admin-reports-page {
+  padding: 24px 32px 40px;
+  display: grid;
+  gap: 20px;
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.reports-header h1 {
+  margin: 4px 0 6px;
+  color: #0f172a;
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+}
+
+.reports-header p {
+  color: #64748b;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.btn-export {
+  padding: 8px 16px;
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-export:hover {
+  background: #1e293b;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.metric-box {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metric-box span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.metric-box strong {
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.metric-box small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.reports-split-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .reports-split-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.report-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.report-card h2 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.report-table th {
+  background: #f8fafc;
+  color: #475569;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.report-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.full-card {
+  margin-top: 20px;
+}
+

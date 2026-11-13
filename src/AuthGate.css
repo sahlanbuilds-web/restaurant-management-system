@@ -1,0 +1,335 @@
+.auth-state,
+.auth-login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f5f6f8;
+  padding: 24px;
+}
+
+.auth-state {
+  color: #455064;
+  font-size: 15px;
+}
+
+.auth-login-card {
+  width: min(100%, 420px);
+  display: grid;
+  gap: 12px;
+  padding: 36px;
+  background: #fff;
+  border: 1px solid #e5e8ed;
+  border-radius: 16px;
+  box-shadow: 0 18px 54px rgb(22 34 51 / 9%);
+}
+
+.auth-login-card h1,
+.auth-login-card p {
+  margin: 0;
+}
+
+.auth-login-card h1 {
+  color: #17233a;
+  font-size: 28px;
+}
+
+.auth-login-card > p:not(.auth-eyebrow) {
+  margin-bottom: 10px;
+  color: #667085;
+}
+
+.auth-eyebrow {
+  color: #e87516;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.auth-login-card label {
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-login-card input {
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.auth-login-card button {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #17233a;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.auth-login-card button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+.auth-login-card .auth-mode-toggle {
+  min-height: 32px;
+  margin-top: 0;
+  padding: 4px 0;
+  background: transparent;
+  color: #b76622;
+}
+
+.auth-error,
+.auth-session-error {
+  padding: 10px 12px;
+  border: 1px solid #f2b8b5;
+  border-radius: 8px;
+  background: #fff4f3;
+  color: #a12622;
+  font-size: 13px;
+}
+
+.auth-success {
+  padding: 10px 12px;
+  border: 1px solid #a8d5b4;
+  border-radius: 8px;
+  background: #f0faf2;
+  color: #24633d;
+  font-size: 13px;
+}
+
+.auth-session-bar {
+  display: none !important;
+}
+
+.auth-breadcrumbs {
+  display: none;
+}
+
+.auth-brand {
+  color: #1e2d3a;
+  font-weight: 600;
+}
+
+.auth-current {
+  color: #2b3843;
+  font-weight: 600;
+}
+
+.auth-divider {
+  color: #a5adb8;
+}
+
+.auth-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.auth-icon-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.auth-icon-button svg,
+.auth-profile-trigger svg {
+  width: 17px;
+  height: 17px;
+  stroke: #364552;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.auth-profile-menu {
+  position: relative;
+}
+
+.auth-profile-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 6px 8px 6px 10px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #1f2a35, #1a2730);
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: 0 12px 22px rgba(21, 31, 38, 0.12);
+}
+
+.auth-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f4a15a, #de6c29);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.auth-profile-info {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+}
+
+.auth-profile-info strong {
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.auth-profile-info small {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-profile-trigger svg {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255, 255, 255, 0.8);
+}
+
+.auth-profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  padding: 8px;
+  display: grid;
+  gap: 4px;
+  z-index: 40;
+}
+
+.auth-profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid rgba(15, 23, 42, 0.08);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  transform: rotate(45deg);
+}
+
+.auth-dropdown-item {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 13px;
+  color: #1f2d38;
+  cursor: pointer;
+}
+
+.auth-dropdown-item:hover {
+  background: #f5f7f9;
+}
+
+.auth-dropdown-item.danger {
+  color: #b5392d;
+}
+
+.auth-session-error {
+  border-radius: 0;
+  text-align: center;
+}
+
+.top-actions > .profile-button {
+  display: none;
+}
+
+.settings-form > .form-section:nth-of-type(3) + .form-grid {
+  display: none;
+}
+
+.settings-form > .form-section:nth-of-type(3) p {
+  display: none;
+}
+
+.settings-form > .form-section:nth-of-type(3) h2::after {
+  content: "Receipts and kitchen/bar tickets open your browser print dialog. Select a printer there or in your operating system; printer choices are not stored in this app.";
+  display: block;
+  margin-top: 8px;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body[data-role="Kitchen"] .sidebar nav > button:not(:first-child):not(:nth-child(8)):not(:nth-child(9)) {
+  display: none;
+}
+
+body[data-role="Kitchen"] .restaurant-dashboard-stats article:nth-child(n + 3) {
+  display: none;
+}
+
+body[data-role="Kitchen"] .sidebar nav > button:first-child,
+body[data-role="Kitchen"] .sidebar nav > button:nth-child(8),
+body[data-role="Kitchen"] .sidebar nav > button:nth-child(9) {
+  display: flex;
+}
+
+body[data-role="Cashier"] .sidebar nav > button:nth-child(3),
+body[data-role="Waiter"] .sidebar nav > button:nth-child(3),
+body[data-role="Kitchen"] .sidebar-lower > button:nth-child(2),
+body[data-role="Cashier"] .sidebar-lower > button:nth-child(2),
+body[data-role="Waiter"] .sidebar-lower > button:nth-child(2),
+body[data-role="Cashier"] .sidebar nav > button:nth-child(6),
+body[data-role="Waiter"] .sidebar nav > button:nth-child(6),
+body[data-role="Cashier"] .sidebar nav > button:nth-child(7),
+body[data-role="Waiter"] .sidebar nav > button:nth-child(7),
+body[data-role="Cashier"] .sidebar nav > button:nth-child(n + 8),
+body[data-role="Waiter"] .sidebar nav > button:nth-child(n + 8) {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .auth-session-bar {
+    padding-inline: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-height: 90px;
+  }
+
+  .auth-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .auth-breadcrumbs {
+    width: 100%;
+  }
+
+  .auth-login-card {
+    padding: 26px 22px;
+  }
+}
